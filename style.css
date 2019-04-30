@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../_imgs/fundo.png); 
+}
+.slider-top{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background:url(../_imgs/slider01.jpg) no-repeat;
+	background-size: 100% 400px;
+	background-attachment: fixed;
+	box-shadow: 5px 0px 3px #000;
+}
+.slider-top .slider-show{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	/*background-color: rgba(15,15,15, 0.6);*/
+	background-image: linear-gradient(90deg, rgba(250,12,12, 0.5), rgba(200,122,12, 0.5), rgba(225,122,250, 0.5), rgba(20,12,12, 0.5));
+}
+#titulo-principal{
+	position: relative;
+	width: 1100px;
+	height: 100px;
+	margin: 0 auto;
+	top: 80px;
+	/*background-color: red;*/
+
+
+}
+#titulo{
+	color: #fff;
+	font-size: 60pt;
+	text-align: center;
+	font-weight: bolder;
+	text-shadow: 0px 0px 5px #000;
+	font-family: 'Michroma', sans-serif;
+}
+#titulo::after{
+	content: '|';
+	margin-left: 5px;
+	opacity: 1;
+	animation: pisca .8s infinite;
+}
+@keyframes pisca{
+	0%,100%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+}
+.titulo-span{
+	font-size: 12pt;
+}
+div#top-menu{
+	position: absolute;
+	z-index: 200;
+	float: left; 
+	width: 600px;
+	height: 30px;
+	left: 7%;
+	
+}
+nav#menu ul{
+	display: block;
+}
+
+ul li{
+	font-family: 'Titillium Web', sans-serif;
+	list-style: none;
+	float: left;
+	margin: 5px 5px	;
+	margin-top: 360px;
+}
+ul li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: rgba(12,12,12, 0.5);
+	padding: 10px;
+	border-radius: 30px;
+}
+.fas{
+	margin-right: 5px;
+}
+/*Inicio do css da informação*/
+article#infor{
+	position: relative;
+	background-color: #fff;
+	width: 100%;
+	height: 1200px;
+	top: 10px;
+	box-shadow: 5px 0px 3px #000;
+}
+#tt-if{
+	width: 100%;
+	height: 110px;
+	/*background-color: red;*/
+}
+#h1-if{
+	font-family: 'Titillium Web', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 50pt;
+	color: #292929;
+}
+#barra{
+	width: 130px;
+	height: 10px;
+	background-color: #393939;
+	margin: 0 auto;
+	margin-top: -10px;
+	border-radius: 10px;
+
+}
+.infor-banner{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	top: 2px;
+	left: 200px;
+	float: left;
+
+}
+.rig{
+	border-right: 3px solid #393939;
+}
+.btom{
+	border-bottom: 3px solid #393939;
+}
+.infor-txt{
+	position: absolute;
+	width: 100%;
+	bottom: 15px;
+	/*text-shadow: 0px 0px 9px #121212;*/
+
+}
+.txt-i{
+	font-size:40pt;
+	text-align: center;
+	color: #292929;
+	font-family: 'Michroma', sans-serif;
+}
+.banner-img{
+	position: absolute;
+	top: 10px;
+	width: 100%;
+}
+.pro{
+	font-size: 300pt;
+	margin: 0 auto;
+	text-align: center;
+}
+.html{
+	color:#E54D26;
+}
+.css{
+	color:#0071B7;
+}
+.js{
+	color: #F7DF1D;
+}
+.php{
+	font-size: 280pt;
+	color:#4F5C93;
+}
+.myq{
+	color: #DC8E3C;
+	font-size: 280pt;
+}
+.word{
+	color: #21759A;
+}
+/*redes sociais*/
+.div-redes{
+	position:absolute;
+	width: 300px;
+	height: 50px;
+	bottom: 5px;
+ 	right:10px;
+	/*background-image: linear-gradient(90deg, rgba(250,12,12, 0.5), rgba(200,122,12, 0.5), rgba(225,122,250, 0.5), rgba(20,12,12, 0.5));*/
+
+}
+.link-redes{
+	color: #fff;
+	font-size: 30pt;
+	padding: 2px 15px;
+	float: left;
+	margin: 0 5px;
+	border-radius: 10px;
+
+	
+}
+.face:hover{
+	color: #3A5A97;
+}
+.inst:hover{
+	color: #CA2A76 ;
+
+/*	background: linear-gradient(180deg, rgba(138, 58, 185, 0.5), rgba(233, 89, 80, 0.5), rgba(188, 42, 141, 0.5), rgba(252, 204, 99, 0.5),rgba(251, 173, 80, 0.5),rgba(205, 72, 107, 0.5),rgba(76, 104, 215, 0.5));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+
+}
+.twi:hover{
+	color:#1DA1F3;
+}
+.what:hover{
+	color:#50CC5C;
+}
+/*Fim do css da informação*/
+
+/*css do projeto-x*/
+#projeto-x{
+	position: relative;
+	width: 100%;
+	height: 1000px;
+	background: url(../_imgs/parallax.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin-top: 20px;
+}
+/*fim do css projeto-x*/
