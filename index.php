@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="_css/style.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<script src="_js/jquery-3.4.0.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="_js/scritpjs.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="jquery-3.4.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scritpjs.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 
