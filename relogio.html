@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relogio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #404040;
+            overflow: hidden;
+        }
+        #boxRelogio{
+            position: relative;
+            margin: 20% 40%;
+            background-color: #353535;
+            color: #fff;
+            width: 300px;
+            height: 140px;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'ZCOOL QingKe HuangYou', open sans;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+
+        }
+        #relogio{
+        	position: relative;
+            font-size: 60px;
+            margin-left: 15px;
+        }
+        #seg{
+        	font-size: 12pt;
+        }
+        #data{
+            position: absolute;
+            top:5px;
+        }
+
+        #boxButao{
+            position: absolute;
+            top: 50px;
+            background-color: #353535;
+            width: 100px;
+            height: 40px;
+            border-radius: 50px;
+            right: 50px;
+            padding: 2px;
+        }
+        #butao{
+            position: absolute;
+            width: 70px;
+            height: 40px;
+            border-radius: 40px;;
+            background-color: #252525;
+            cursor: pointer;
+        }
+        .status{
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;;
+        }
+        .ativado{
+            transform: translateX(30px);
+        }
+        #ligado{
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            background-color: rgb(27, 161, 0);
+            box-shadow: 0px 0px 9px  rgb(27, 161, 0);
+        }
+        #desligado{
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            background-color: red;
+            box-shadow: 0px 0px 9px  red;
+        }
+		#formato{
+			position: absolute;
+			right: 15px;
+			top: 5px;
+			display: none;
+		}
+		.formBox{
+			position: relative;
+			top: 50px;
+			left: 50px;
+			width: 100px;
+			height: 50px;
+			background-color: #353535;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.formH{
+			width: 50px;
+			height: 50px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			cursor: pointer;
+			font-size: 10pt;
+			font-family: open sans;
+		}
+		.formAtivado{
+			background-color: #0fc1ff;
+		}
+
+        @media only screen and (max-width: 360px){
+        #boxRelogio{
+            position: relative;
+            margin: 40% 30px;
+            background-color: #353535;
+            color: #fff;
+            width: 300px;
+            height: 140px;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'ZCOOL QingKe HuangYou', open sans;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+          
+        }
+        #relogio{
+            font-size: 60px;
+        }
+        #data{
+            position: absolute;
+            top:5px;
+            left: 15px;
+        }
+
+        #boxButao{
+            position:relative
+            top: 50px;
+            background-color: #353535;
+            width: 100px;
+            height: 40px;
+            border-radius: 50px;
+            right: 15px;
+            padding: 2px;
+        }
+        #butao{
+            position: absolute;
+            width: 70px;
+            height: 40px;
+            border-radius: 40px;;
+            background-color: #252525;
+            cursor: pointer;
+        }
+        .status{
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;;
+        }
+        .ativado{
+            transform: translateX(30px);
+        }
+        #ligado{
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            background-color: rgb(27, 161, 0);
+            box-shadow: 0px 0px 9px  rgb(27, 161, 0);
+        }
+        #desligado{
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            background-color: red;
+            box-shadow: 0px 0px 9px  red;
+        }
+        #formato{
+			position: absolute;
+			right: 15px;
+			top: 5px;
+			display: block;
+		}
+		.formBox{
+			position: relative;
+			top: 50px;
+			left: 10px;
+			width: 100px;
+			height: 50px;
+			background-color: #353535;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.formH{
+			width: 50px;
+			height: 50px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			cursor: pointer;
+			font-size: 10pt;
+			font-family: open sans;
+		}
+		.formAtivado{
+			background-color: #252525;
+		}
+
+        }
+       
+    </style>
+
+</head>
+<body>
+	<div class="formBox">
+		<div class="formAtivado formH">12Hs</div>
+		<div class="formH ">24Hs</div>
+		
+	</div>
+   <div id="boxRelogio">
+        <div id="relogio"><span id="hor"></span><span id="seg"></span></div>
+        <div id="data"></div>
+        <div id="formato"></div>
+    </div> 
+
+    
+    <div id="boxButao">
+        <div id="ligado" class="status"></div>
+        <div id="desligado" class="status"></div>
+        <div id="butao"></div>
+    </div>
+	
+    <script>
+        var formActive = false
+
+        function relogioUm(){
+            var tempo = new Date()
+            if(!formActive) {
+            	var horas = (tempo.getHours() + 11) % 12 + 1
+            	var minutos = tempo.getMinutes()
+           		var segundos = tempo.getSeconds() 
+        	}else{
+        		var horas = tempo.getHours()
+        		var minutos = tempo.getMinutes()
+           		var segundos = tempo.getSeconds() 
+        	}
+            
+        	if(tempo.getHours() > 12){
+        		formato.innerHTML = "PM"
+        	}else{
+        		formato.innerHTML = "AM"
+        	}
+
+            var dia = tempo.getDate();
+            var mes = tempo.getMonth() + 1;
+            var ano = tempo.getFullYear();
+
+             if( horas < 10){
+                 horas = '0'+ horas
+             }
+             if( minutos < 10){
+                minutos = '0'+ minutos
+             }
+             if(segundos < 10){
+                segundos = '0'+ segundos
+             }
+             if(dia < 10){
+                 dia = "0" + dia
+             }else if(mes < 10){
+                mes = "0" + mes
+             }
+             var hors = document.getElementById("hor")
+             var segs = document.getElementById('seg')
+             var data = document.getElementById('data')
+            
+             hors.innerHTML = horas + ":" + minutos
+             segs.innerHTML = segundos
+             data.innerHTML = dia +"/"+ mes +"/"+ano
+        }
+        
+        var timeLoad = setInterval(relogioUm, 1000)
+
+        var btnStatus = document.getElementById("butao")
+
+        btnStatus.addEventListener("click", ligaDesliga, false)
+        dragA = false
+
+        function ligaDesliga(){ 
+            if(!dragA){
+                btnStatus.classList.add('ativado')
+                dragA = true
+                stopTime()
+            }else{
+                btnStatus.classList.remove('ativado')
+                dragA = false
+                startTime()
+            }
+        }
+
+     
+	    function startTime(){
+	        timeLoad = setInterval(relogioUm, 1000)
+	    }
+	  
+
+        function stopTime(){
+           clearInterval(timeLoad)
+        }
+
+
+        var btnFormato = document.querySelectorAll(".formH")
+        var formato = document.querySelector("#formato")
+
+       	btnFormato[0].addEventListener('click', formatoUm)
+       	btnFormato[1].addEventListener('click',	formatoDois)
+
+        function formatoUm(){
+        	btnFormato[1].classList.remove('formAtivado')
+        	btnFormato[0].classList.add('formAtivado')
+        	formato.style.display = "block"
+        	formActive = false
+        }
+        function formatoDois(){
+        	btnFormato[0].classList.remove('formAtivado')
+        	btnFormato[1].classList.add('formAtivado')
+        	formato.style.display = "none"
+        	formActive = true
+        }
+    </script>
+</body>
+</html>	
